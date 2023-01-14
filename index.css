@@ -75,7 +75,7 @@ body {
     color: hsl(183, 100%, 15%);
 }
 
-.bill:focus-within, .people:focus-within {
+.bill:focus-within, .people:focus-within, .bill:hover, .people:hover {
     border: 0.13rem solid hsl(172, 67%, 45%) !important;
 }
 
@@ -115,12 +115,20 @@ body {
     padding: 0.7rem;
     width: 100%;
     box-sizing: border-box;
-    outline-color: hsl(172, 67%, 45%) !important;
+    
     border-radius: 0.35rem;
     font-family: 'Space Mono', monospace;
     letter-spacing: 0.1rem;
     color: hsl(183, 100%, 15%);
     border: 0.13rem solid hsl(189, 41%, 97%);
+}
+
+.tip input:not(:hover), .tip input:not(:focus) {
+    outline: none;
+}
+
+.tip input:hover, .tip input:focus {
+    outline: 0.13rem solid hsl(172, 67%, 45%);
 }
 
 .tip input::placeholder {
@@ -211,6 +219,9 @@ body {
 @media (min-width: 992px) {
     .card {
         width: 60%;
+    }
+    .tip {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

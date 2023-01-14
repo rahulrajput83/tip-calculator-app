@@ -80,6 +80,7 @@ function resetColor() {
 
 tipBtn.forEach((e) => {
     e.addEventListener('click', () => {
+        tipInput.value = '';
         resetColor();
         e.style.background = 'hsl(172, 67%, 45%)';
         e.style.color = '#000'
