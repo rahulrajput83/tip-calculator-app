@@ -24,7 +24,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](screenshot.png)
+<p>
+    <img src="screenshot.png" />
+</p>
 
 ### Links
 
