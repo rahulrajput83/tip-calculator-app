@@ -22,10 +22,11 @@ function calculate() {
 
     if (bill && tip && totalPerson) {
         resetBtn.disabled = false;
-        totalAmount = bill + (bill * tip / 100);
-        perPersonAmount = totalAmount / totalPerson;
+        perPersonAmount = ((bill * tip / 100) / totalPerson);
+        totalAmount = (bill / totalPerson) + perPersonAmount;
         perperson.innerText = `$${perPersonAmount.toFixed(2)}`;
         total.innerText = `$${totalAmount.toFixed(2)}`;
+        
     }
     else {
         resetBtn.disabled = true;
@@ -34,7 +35,7 @@ function calculate() {
 }
 
 function personFun(value) {
-    totalPerson = parseInt(value);
+    totalPerson = parseFloat(value);
     if(totalPerson == 0) {
         peopleClass.style.borderColor = 'hsla(0, 83%, 44%, 0.714)';
         personErr.style.display = 'block';
@@ -47,7 +48,7 @@ function personFun(value) {
 }
 
 function tipFun(value) {
-    tip = parseInt(value);
+    tip = parseFloat(value);
     if(tip == 0) {
         tipErr.style.display = 'block';
     }
@@ -59,7 +60,7 @@ function tipFun(value) {
 }
 
 function billFun(value) {
-    bill = parseInt(value);
+    bill = parseFloat(value);
     if(bill == 0) {
         billClass.style.borderColor = 'hsla(0, 83%, 44%, 0.714)';
         billErr.style.display = 'block';
