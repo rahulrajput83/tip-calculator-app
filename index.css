@@ -222,9 +222,9 @@ body {
         margin-top: 0;
         width: 7%;
         position: absolute;
-        top: 8%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, 0);
+        transform: translate(-50%, -580%);
         z-index: 10;
     }
 }
