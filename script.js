@@ -36,7 +36,7 @@ function calculate() {
 
 function personFun(value) {
     totalPerson = parseFloat(value);
-    if(totalPerson == 0) {
+    if(totalPerson <= 0) {
         peopleClass.style.borderColor = 'hsla(0, 83%, 44%, 0.714)';
         personErr.style.display = 'block';
     }
@@ -49,7 +49,7 @@ function personFun(value) {
 
 function tipFun(value) {
     tip = parseFloat(value);
-    if(tip == 0) {
+    if(tip <= 0) {
         tipErr.style.display = 'block';
     }
     else {
@@ -61,7 +61,7 @@ function tipFun(value) {
 
 function billFun(value) {
     bill = parseFloat(value);
-    if(bill == 0) {
+    if(bill <= 0) {
         billClass.style.borderColor = 'hsla(0, 83%, 44%, 0.714)';
         billErr.style.display = 'block';
     }
@@ -118,6 +118,7 @@ function reset() {
     personInput.value = totalPerson;
     total.innerText = `$0.00`;
     perperson.innerText = `$0.00`
+    tipInput.value = '';
     billInput.value = ''
     resetColor();
     resetBtn.disabled = true

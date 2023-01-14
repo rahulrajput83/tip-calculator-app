@@ -20,6 +20,10 @@ body {
     letter-spacing: 0.3rem;
     width: 20%;
     text-transform: uppercase;
+    font-weight: 300;
+    color: hsl(184, 14%, 56%);
+    margin-top: 1.5rem;
+    font-family: 'Space Mono', monospace;
 }
 
 .card {
@@ -214,6 +218,15 @@ body {
     .mobile {
         width: 100%;
     }
+    .title {
+        margin-top: 0;
+        width: 7%;
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 10;
+    }
 }
 
 @media (min-width: 992px) {
@@ -223,6 +236,7 @@ body {
     .tip {
         grid-template-columns: repeat(3, 1fr);
     }
+    
 }
 
 
