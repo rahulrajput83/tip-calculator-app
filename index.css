@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+.title {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    width: 20%;
+    text-transform: uppercase;
+}
+
+.card {
+    margin-top: 2rem;
+    width: 100%;
+    background: hsl(0, 0%, 100%);
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    border-radius: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.card span {
+    font-size: 0.9rem;
+    color: hsl(184, 14%, 56%);
+}
+
+.bill, .people {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    background: hsl(189, 41%, 97%);
+    gap: 1rem;
+    border-radius: 0.35rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.7rem;
+    border: 0.13rem solid hsl(189, 41%, 97%);
+}
+
+.bill i, .people i {
+    color: hsl(186, 13%, 56%);
+    font-size: 0.8rem;
+}
+
+.bill input, .people input {
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: right;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Space Mono', monospace;
+    padding: 0.7rem;
+    color: hsl(183, 100%, 15%);
+}
+
+.bill:focus-within, .people:focus-within {
+    border: 0.13rem solid hsl(172, 67%, 45%) !important;
+}
+
+.bill input::placeholder, .people input::placeholder{
+    color: silver;
+}
+
+.tip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box; 
+    margin-bottom: 1rem;
+}
+
+.tip button {
+    padding: 0.7rem;
+    border: none;
+    background: hsl(183, 100%, 15%);
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.35rem;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+}
+
+.tip button:hover {
+    background: hsl(172, 67%, 45%);
+    color: black;
+}
+
+.tip input {
+    background: hsl(189, 41%, 97%);
+    font-size: 1rem;
+    text-align: right;
+    padding: 0.7rem;
+    width: 100%;
+    box-sizing: border-box;
+    outline-color: hsl(172, 67%, 45%) !important;
+    border-radius: 0.35rem;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.1rem;
+    color: hsl(183, 100%, 15%);
+    border: 0.13rem solid hsl(189, 41%, 97%);
+}
+
+.tip input::placeholder {
+    color: hsl(186, 14%, 43%);
+}
+
+.innerCard {
+    display: flex;
+    flex-direction: column;
+    background: hsl(183, 100%, 15%);
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    gap: 0.6rem;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.left span:first-child {
+    color: white;
+    font-size: 0.95rem;
+}
+
+.right span {
+    font-size: 1.8rem;
+    color: hsl(172, 67%, 45%);
+}
+
+.reset {
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    font-family: 'Space Mono', monospace;
+    background: hsl(172, 67%, 45%);
+    font-size: 1rem;
+    color: hsl(183, 100%, 15%);
+    margin-top: auto;
+    cursor: pointer;
+}
+.reset:hover {
+    background: hsl(185, 41%, 84%);
+}
+.reset:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.err {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.err span:last-child {
+    color: hsla(0, 83%, 44%, 0.714);
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .card {
+        margin-top: 0;
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .mobile {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        width: 60%;
+    }
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    appearance: textfield;
+    -moz-appearance: textfield;
+}

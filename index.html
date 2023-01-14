@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="mobile">
+        <div class="err">
+          <span>Bill</span>
+          <span class="billErr">Can't be zero</span>
+        </div>
+        <div class="bill">
+          <i class="fa fa-dollar"></i>
+          <input
+            type="number"
+            onchange="billFun(this.value)"
+            class="billInput"
+            placeholder="0"
+          />
+        </div>
+        <div class="err">
+          <span>Select Tip %</span>
+          <span class="tipErr">Can't be zero</span>
+        </div>
+        <div class="tip">
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <input
+            type="number"
+            onchange="tipFun(this.value)"
+            class="tipInput"
+            placeholder="Custom"
+          />
+        </div>
+        <div class="err">
+          <span>Number of People</span>
+          <span class="personErr">Can't be zero</span>
+        </div>
+        <div class="people">
+          <i class="fa fa-user"></i>
+          <input
+            type="number"
+            class="totalPerson"
+            onchange="personFun(this.value)"
+            placeholder="0"
+            value="5"
+          />
+        </div>
+      </div>
+      <div class="innerCard">
+        <div class="top">
+          <div class="left">
+            <span>Tip Amount</span>
+            <span>/ person</span>
+          </div>
+          <div class="right">
+            <span class="person">$0.00</span>
+          </div>
+        </div>
+        <div class="top">
+          <div class="left">
+            <span>Total</span>
+            <span>/ person</span>
+          </div>
+          <div class="right">
+            <span class="total">$0.00</span>
+          </div>
+        </div>
+
+        <button disabled="true" onclick="reset()" class="reset">Reset</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
